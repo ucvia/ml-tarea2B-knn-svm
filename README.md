@@ -73,7 +73,7 @@ Usaremos el dataset [mnist](http://www.pymvpa.org/datadb/mnist.html) con la inte
 
 El código base está hecho en [Streamlit](https://streamlit.io/) un framework para desarrollar aplicaciones en Python enfocadas en datos.
 
-La [Documentación](https://docs.streamlit.io/) de streamlit es bastante sencilla de usar y la mayoría de funcionalidades necesarias ya están implementadas.
+La [Documentación](https://docs.streamlit.io/) de streamlit es bastante sencilla de entender y la mayoría de funcionalidades necesarias ya están implementadas.
 
 ### Cómo ejecutar la aplicación
 
