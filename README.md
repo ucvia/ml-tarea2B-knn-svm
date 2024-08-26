@@ -1,4 +1,4 @@
-# Tarea 2.B: Clasificación
+# Tarea 2: Clasificación
 
 ## Objetivo
 
