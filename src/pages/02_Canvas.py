@@ -8,12 +8,12 @@ from streamlit_drawable_canvas import st_canvas
 
 im = Image.open("favicon.ico")
 
-st.set_page_config(
-    "EsKape Room",
-    im,
-    initial_sidebar_state="expanded",
-    layout="wide",
-)
+#st.set_page_config(
+#    "EsKape Room",
+#    im,
+#    initial_sidebar_state="expanded",
+#    layout="wide",
+#)
 
 if "number" not in st.session_state:
     st.session_state["number"] = 0
@@ -241,7 +241,7 @@ def play_canvas():
             st.write(number_1.image_data.shape)
 
             st.write("Matriz asociada a la imagen")
-            st.write(number_1.image_data)
+            st.write(number_1.image_data[1])
 
             st.write("Transforming image")
 
@@ -273,7 +273,7 @@ def play_canvas():
             st.image(exponent_1.image_data)
 
             st.write("Matriz asociada a la imagen")
-            st.write(exponent_1.image_data)
+            st.write(exponent_1.image_data[1])
 
             st.write("Dimensiones de la imagen")
             st.write(exponent_1.image_data.shape)
@@ -310,7 +310,7 @@ def play_canvas():
             st.image(operator_1.image_data)
 
             st.write("Matriz asociada al operador")
-            st.write(operator_1.image_data)
+            st.write(operator_1.image_data[1])
 
             st.write("Dimensiones del operador")
             st.write(operator_1.image_data.shape)
@@ -348,6 +348,7 @@ def play_canvas():
             y_test=y_test
         )
 
+    
 
 def main():
     play_canvas()

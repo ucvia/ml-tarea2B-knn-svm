@@ -5,12 +5,12 @@ import streamlit as st
 from PIL import Image
 
 im = Image.open("favicon.ico")
-st.set_page_config(
-    "EsKape Room",
-    im,
-    initial_sidebar_state="expanded",
-    layout="wide",
-)
+#st.set_page_config(
+#    "EsKape Room",
+#    im,
+#    initial_sidebar_state="expanded",
+#    layout="wide",
+#)
 
 def explanation():
     st.header("Página principal")

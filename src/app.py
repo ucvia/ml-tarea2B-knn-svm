@@ -1,9 +1,8 @@
-from st_pages import Page, show_pages, add_page_title
+from st_pages import add_page_title, get_nav_from_toml 
 import streamlit as st
 from pathlib import Path
+ 
 
-# Optional -- adds the title and icon to the current page
-add_page_title()
 
 # Management del session state
 
@@ -31,12 +30,36 @@ def ui():
     # https://raw.githubusercontent.com/omnidan/node-emoji/master/lib/emoji.json
     # Puedes sea copiar y pegar el icon como colocar el nombre entre :.
     # Ejemplo: :clipboard:
-    show_pages(
-        [
-            Page("src/pages/01_A_Jugar.py", "A Jugar", ":clipboard:"),
-            Page("src/pages/02_Canvas.py", "Canvas", ":pencil:"),
-            Page("src/pages/03_Cargar_modelos.py", "Cargar Modelo", ":information_source:")
-        ]
+    # If you want to use the no-sections version, this
+    
+    # defaults to looking in .streamlit/pages.toml, so you can
+    # just call `get_nav_from_toml()`
+
+    st.set_page_config(
+        page_title="Hello",
+        page_icon="👋",
+    )
+
+    st.write("# Welcome to Streamlit! 👋")
+
+    st.sidebar.success("Select a demo above.")
+
+    st.markdown(
+        """
+        Streamlit is an open-source app framework built specifically for
+        Machine Learning and Data Science projects.
+        **👈 Select a demo from the sidebar** to see some examples
+        of what Streamlit can do!
+        ### Want to learn more?
+        - Check out [streamlit.io](https://streamlit.io)
+        - Jump into our [documentation](https://docs.streamlit.io)
+        - Ask a question in our [community
+            forums](https://discuss.streamlit.io)
+        ### See more complex demos
+        - Use a neural net to [analyze the Udacity Self-driving Car Image
+            Dataset](https://github.com/streamlit/demo-self-driving)
+        - Explore a [New York City rideshare dataset](https://github.com/streamlit/demo-uber-nyc-pickups)
+    """
     )
 
     # st.write(Path("src/md/Objetivo.md").read_text())

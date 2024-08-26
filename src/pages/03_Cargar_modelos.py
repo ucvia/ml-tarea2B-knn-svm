@@ -4,12 +4,12 @@ import streamlit as st
 from PIL import Image
 
 im = Image.open("favicon.ico")
-st.set_page_config(
-    "EsKape Room",
-    im,
-    initial_sidebar_state="expanded",
-    layout="wide",
-)
+#st.set_page_config(
+#    "EsKape Room",
+#    im,
+#    initial_sidebar_state="expanded",
+#    layout="wide",
+#)
 
 # Función para guardar el archivo en una carpeta específica
 def save_uploaded_file(uploaded_file, folder_name='src/models/output'):
